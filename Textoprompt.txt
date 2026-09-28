@@ -1,0 +1,53 @@
+App progresiva llamada Dietas al Día
+Propósito: Prototipo de alta fidelidad (visual y funcionalmente muy cercano al producto final) que materialice los requisitos
+Usuarios objetivo: Médicos nutricionistas
+
+EPC 28: Asignación tratamiento nutricional
+Cómo médico del Departamento de Nutrición quiero consultar las dietas compatibles con el diagnóstico 
+de un paciente, señalando explícitamente si alguna dieta contiene alimentos incompatibles con sus 
+alergias registradas, para elegir con seguridad un tratamiento sin cruzar manualmente la historia clínica 
+con el catálogo de dietas.
+Criterios de aceptación:
+• CA1: Dado un paciente con una enfermedad registrada, el sistema muestra las dietas asociadas 
+en un único paso.
+• CA2: Si una dieta recomendada incluye un alimento alérgeno/incompatible del paciente, el 
+sistema lo señala de forma inequívoca antes de confirmar.
+• CA3: El médico accede a la ficha técnica completa de la dieta sin perder el contexto del paciente.
+• CA4: Un usuario nuevo elige una dieta segura en menos de 90 segundos sin pasar por alto 
+ninguna alerta.
+
+FUNCIONALIDAD PRINCIPAL
+Funciones imprescindibles (MVP):
+RF1 Gestionar el catálogo de alimentos (nombre, definición, origen, funcionalidad principal).
+RF2 Gestionar nutrientes (nombre, definición, funcionalidad, tipo/subtipo, enfermedades por déficit, fuentes alimentarias).
+RF3 Gestionar vitaminas y minerales (funciones asociadas, ración dietética recomendada).
+RF4 Gestionar dietas prediseñadas (objetivos, definición técnica, aporte calórico, componentes, ingesta necesaria, vía de administración, duración, dosificación, pauta, suplementos), compuestas de alimentos.
+RF5 Gestionar el catálogo de enfermedades nutricionales (causas, diagnosis, diagnósticos diferenciales, tratamiento y objetivo del tratamiento).
+RF6 Gestionar la historia clínica del paciente (datos personales, peso, talla, incompatibilidades, alergias, antecedentes familiares, enfermedades asociadas).
+
+Requisitos funcionales
+RF-01: el sistema deberá cargar la información del paciente: historia clínica, enfermedades nutricionales del paciente, además carácteristicas de peso y altura.
+RF-02: el sistema deberá buscar las dietas en función del catalogo de alimentos, tomando en cuenta los nutrientes, vitaminas y minerales, las enfermedades nutricionales del paciente, y la historia clínica. Ordenadas de mejor a menos: tomando encuenta la dificultad para cocinarlo, la cantidad de elementos necesarios, el precio general de los productos y la dificultad para encontrar los alimentos según el lugar de vivienda del paciente
+RF-03: el sistema deberá mostrar los alimentos de cada dieta, indicando explicitamente si contiene elementos alérgenos incompatibles con la enfermedades nutricionales del paciente e historia clínica
+RF-04: el sistema recoge los RF-01, RF-02 y RF-03 en una ficha técnica completa, para facilitar la lectura del contexto del paciente
+
+STACK TÉCNICO
+Frontend: React
+Estilos: styled-components
+Backend/datos: ninguno
+DISEÑO Y UX
+Estilo visual: minimalista / Colores blancos, y elementos en gama de naranjas
+Paleta de colores: elige algo coherente con apps salud
+Referencias de inspiración: longevo app
+Responsive: Sí
+
+COMPORTAMIENTO E INTERACCIÓN
+Qué pasa al cargar la app: Registro de usuario,
+Flujo principal del usuario: Registro de usuario, gestión de información dietas, consulta historia clínica pacientes, diagnóstico paciente, asignación dieta
+Casos límite a manejar: solo usuarios registrados con cuenta google
+
+RESTRICCIONES
+Nivel de complejidad: prototipo rápido
+
+ENTREGABLE
+Genera el código completo y funcional de la aplicación, listo para ejecutar, comentarios breves donde la lógica no sea obvia.
